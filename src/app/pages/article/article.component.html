@@ -1,0 +1,31 @@
+<div class="card border-primary">
+  <div class="card-header">
+    <h3>{{ article.title }}</h3>
+
+    <div>
+      <span class="badge badge-pill badge-dark" style="background-color: #212529;margin-right: 5px;">
+        <i class="fa  fa-calendar"></i>
+        {{ article.publishDate }}
+      </span>
+      <span class="mr-1"></span>
+      <span class="badge badge-pill badge-success" style="background-color: #198754; margin-right: 5px;">
+        <i class="fa  fa-folder"></i> {{ category.name }}
+      </span>
+      <span class="mr-1"></span>
+      <span class="badge badge-pill badge-success" style="background-color: #198754; margin-right: 5px;">
+        <i class="fa  fa-eye"></i> {{ article.viewCount }}
+      </span>
+      <span class="mr-1"></span>
+
+      <span class="badge badge-pill badge-primary" style="background-color: #0d6efd; margin-right: 10px;">
+        <i class="fa  fa-comment"></i> {{ article.commentCount }}
+      </span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="ck ck-content" [innerHTML]="article.contentMain"></div>
+  </div>
+
+
+
+</div>
